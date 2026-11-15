@@ -1,0 +1,27 @@
+{
+  "name": "playwright-ecommerce-e2e",
+  "version": "1.0.0",
+  "private": true,
+  "description": "End-to-end test suite for a multi-market e-commerce storefront (Playwright + TypeScript)",
+  "author": "Mukesh Ningadali",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "sut": "node sut/server.mjs",
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^22.20.5",
+    "typescript": "^7.0.2"
+  }
+}
